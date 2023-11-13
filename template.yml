@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: coupon template
+
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 300
+      MemorySize: 128
+      Handler: com.faxd.coupon.lambda.coupon.GetSingleCouponRequestHandler
+      CodeUri: D:\developer\JRAcademic\LambdaCouponService\coupon\
+      Runtime: java17
+      Architectures:
+        - x86_64

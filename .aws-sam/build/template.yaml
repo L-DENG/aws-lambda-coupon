@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: coupon template
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 300
+      MemorySize: 128
+      Handler: com.jracademic.coupon.lambda.coupon.GetSingleCouponRequestHandler
+      CodeUri: Function
+      Runtime: java17
+      Architectures:
+      - x86_64
+    Metadata:
+      SamResourceId: Function
